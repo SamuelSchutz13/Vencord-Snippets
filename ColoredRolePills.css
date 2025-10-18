@@ -1,0 +1,116 @@
+/* Colored Pill Icons */
+.role_dfa8b6.pill_dfa8b6 {
+    position: relative;
+    background: none;
+    border: none;
+    padding-left: 28px;
+    margin-right: -4px;
+    > span {
+        z-index: 1;
+    }
+    .roleRemoveButton_dfa8b6 {
+        position: absolute;
+        inset: 0;
+    }
+    .roleName_dfa8b6 {
+        margin-left: -4px;
+        padding-right: 6px;
+    }
+    .roleIcon__1e6f1 {
+        transform: translateX(-4px);
+    }
+    .roleCircle__4f569 {
+        margin: 6px 8px;
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            background-color: inherit;
+            inset: 0;
+            border-radius: 4px;
+            opacity: 0.4;
+        }
+    }
+    .twoColorGradient_e5de78::before {
+        content: "";
+        background: inherit;
+        background-size: 50% 100%;
+        transition: background-position 0s;
+    }
+    .threeColorGradient_e5de78::before {
+        content: "";
+        background: inherit;
+        background-size: 50% 100%;
+        transition: background-position 0s;
+    }
+    &:hover {
+        .twoColorGradient_e5de78::before,
+        .threeColorGradient_e5de78::before {
+            animation: seamlessGradient 5s linear infinite;
+        }
+    }
+}
+.expandButton_fccfdf.pill_fccfdf,
+.vc-permviewer-role-button {
+    border-color: transparent;
+    border-radius: 4px;
+    background-color: rgb(0 0 0 / 0.1);
+    &:hover {
+        background-color: rgb(0 0 0 / 0.2);
+    }
+}
+@keyframes seamlessGradient {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 0%;
+    }
+}
+[class^="role_"] {
+  position: relative;
+  > [class^="roleRemoveButton_"], > div > [class^="roleRemoveButtonCanRemove_"] {
+    position: static;
+    > [class^="roleCircle_"]::before {
+      content: "";
+      position: absolute;
+      top: 0;  
+      left: 0;
+      width: 100%;  
+      height: 100%;
+      background-color: inherit;
+      opacity: 0.2;
+      z-index: 0;
+    }
+  }
+  > [class^="roleName_"] { 
+        z-index: 1; 
+    }
+    [class^="roleRemoveIcon_"] {
+        left: calc(4px + 1px + 4px + 12px/2);
+    }
+}
+.role_dfa8b6.pill_dfa8b6 .twoColorGradient_e5de78::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        var(--custom-gradient-color-1),
+        var(--custom-gradient-color-2),
+        var(--custom-gradient-color-3)
+    );
+    background-size: 50% 100%;
+    transition: background-position 0s;
+}
+.role_dfa8b6.pill_dfa8b6:hover .twoColorGradient_e5de78::before {
+    animation: seamlessGradient 5s linear infinite;
+}
+@keyframes seamlessGradient {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 0%;
+    }
+}
