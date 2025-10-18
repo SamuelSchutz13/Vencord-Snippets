@@ -80,7 +80,9 @@
     padding-right: 6px !important;
   }
   &:hover {
-    background-color: var(--custom-nameplate, var(--background-modifier-hover));
+    /*background-color: var(--custom-nameplate, var(--background-modifier-hover));*/
+    backdrop-filter: saturate(3) blur(20px);
+    background-color: rgba(0, 0, 0, 0.25);
     color: var(--interactive-hover);
     .contents__201d5 {
       scale: 1.1;
