@@ -111,7 +111,7 @@
   padding: var(--space-sm);
   position: relative;
   &:first-child {
-    border-radius: 7px 7px 0 0;
+    border-radius: 7px;
   }
 
   &:before {
@@ -222,8 +222,7 @@
 .wrapper_e131a9 {
   transition: background-color .2s ease;
   &:first-child {
-    border-top-left-radius: 7px;
-    border-top-right-radius: 7px;
+ border-radius: 7px;
   }
 
   &:hover {
@@ -372,15 +371,16 @@
 }
 
 /*UserPanel*/
-.container__37e49.container__37e49 {
-  border-radius: 0 0 7px 7px;
+.container__37e49 {
+  border-radius: 7px;
   height: unset;
   padding: 0 !important;
   margin: 0;
   transition: background-color .2s ease;
+
   &:hover {
     .buttons__37e49 {
-      backdrop-filter: saturate(3) blur(20px);
+      backdrop-filter: saturate(1.5) blur(20px);
       background-color: rgba(0, 0, 0, 0.25);
       animation: pointerDelay .15s ease forwards;
       opacity: 1;
@@ -443,10 +443,11 @@
 
 /*[PLUGIN / VENCORD / SpotifyControls]*/
 #vc-spotify-player {
+  margin: 0 -1px;
   position: relative;
   min-height: 56px;
-    background: linear-gradient(to bottom, transparent 0%,  var(--background-gradient-highest, var(--background-base-low)) 100%) !important;
-  padding: var(--space-sm) var(--space-xs);
+  border-radius: 7px;
+  border: 1px solid transparent;
   transition: all 0.4s ease-out;
 
   &::before, &::after {
@@ -459,8 +460,11 @@
 
   &::before {
     background: var(--vc-spotify-track-image) center/cover no-repeat;
+    background-position: center top; 
+    background-size: cover; 
     opacity: 0.45;
   }
+
   &::after {
     backdrop-filter: blur(4px);
   }
@@ -484,8 +488,7 @@
 
 #vc-spotify-player::before,
 #vc-spotify-player::after {
-  border-top-left-radius: 7px;
-  border-top-right-radius: 7px;
+  border-radius: 7px;
   z-index: -1;
   content: "";
   position: absolute;
@@ -496,11 +499,6 @@
   transition: all 0.4s ease-out;
 }
 
-#vc-spotify-player::before {
-  background: var(--vc-spotify-track-image);
-  background-position: center top; 
-  background-size: cover; 
-}
 
 #vc-spotify-info-wrapper {
   gap: var(--space-8);
@@ -658,5 +656,30 @@
 [class^="slider_"]:hover [class^="barFill_"] {
   background-color: #1db954 !important; /*#1db954 - Spotify green color*/
 }
+
+/*ROUNDED CORNERS CONTAINER*/
+.panels__5e434 {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background: var(--background-gradient-high, var(--background-base-lowest));
+  border: none;
+}
+
+.mask__0d616 {
+  height: 70px;
+  max-height: 70px;
+  min-height: 70px;
+  margin-inline: 0;
+  padding-inline: 0;
+  border-radius: 7px;
+  pointer-events: none;
+}
+
+.listeningAlong_e0cf27, .panel__5dec7, .container_e131a9, .container__37e49 {
+   background-color: var(--background-gradient-highest, var(--background-base-low));
+   border-radius: 7px;
+}
+
 
 
