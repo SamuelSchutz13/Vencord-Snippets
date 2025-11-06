@@ -646,26 +646,31 @@
   }
 }
 
-[class^="grabber_"] {
+#vc-spotify-progress-bar [class^="grabber_"] {
   background-color: transparent !important;
   border: transparent !important;
 }
 
-[class^="slider_"]:hover [class^="grabber_"] {
-  width: 12px !important;
-  height: 12px !important;
+#vc-spotify-progress-bar [class^="slider_"]:hover [class^="grabber_"] {
+  width: 12px;
+  height: 12px;
   margin-top: calc(13px/-2 + var(--bar-offset)/2);
   margin-left: -3.5px;
   background-color: white !important;
   border: white !important;
 }
 
-[class^="slider_"] [class^="barFill_"] {
+#vc-spotify-progress-bar [class^="slider_"] {
+  --bar-size: 4px !important;
+  --grabber-size: 16px !important;
+}
+
+#vc-spotify-progress-bar [class^="slider_"] [class^="barFill_"] {
   background-color: var(--interactive-active);
 }
 
-[class^="slider_"]:hover [class^="barFill_"] {
-  background-color: #1db954 !important; /*#1db954 - Spotify green color*/
+#vc-spotify-progress-bar [class^="slider_"]:hover [class^="barFill_"] {
+  background-color: var(--vc-spotify-green);
 }
 
 /*Round Containers*/
