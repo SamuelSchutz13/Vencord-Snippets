@@ -112,6 +112,7 @@
   min-height: 56px;
   padding: var(--space-sm);
   position: relative;
+
   &:first-child {
     border-radius: 7px;
   }
@@ -153,18 +154,16 @@
 }
 
 /*ActivityPanel*/
-.activityPanel__5e434.activityPanel__5e434 {
-  background: unset;
-  border-color: var(--border-faint);
-  border-radius: 0;
-  box-sizing: border-box;
-  display: flex;
-  min-height: 56px;
+.activityPanel__5e434 {
+  background-color: var(--background-gradient-highest, var(--background-base-low));
+  border-bottom: 1px solid var(--border-faint);
+  border-radius: 7px;
+  gap: var(--space-8);
   padding: var(--space-sm);
-  transition: background-color .2s ease;
+  position: relative;
 
   &:first-child {
-    border-radius: 7px 7px 0 0;
+    border-radius: 7px;
   }
 
   &:hover {
@@ -178,15 +177,12 @@
   }
 }
 
-.body__5dec7 {
-  width: 100%;
-}
-
 .gameWrapper__5dec7, .gameWrapper__8c6c2 {
   gap: var(--space-8);
   z-index: 1;
 }
 
+	
 .info__8c6c2, .info__5dec7 {
   margin-left: 0;
   a:first-child div {
@@ -219,9 +215,13 @@
 
   &:not(:only-child) .button__67645 {
     border-top-right-radius: unset !important;
-    border-bottom-right-radius: unset !important;
+    border-bottom-right-radius: 1px !important;
     padding-right: 4px !important;
   }
+}
+
+.panel__5dec7 {
+  padding: calc(var(--custom-guild-list-padding) - var(--custom-panels-spacing) + 3px);
 }
 
 /*VoicePanel*/
@@ -248,7 +248,7 @@
   align-items: center;
   box-sizing: border-box;
   flex-direction: unset;
-  gap: var(--space-8);
+
   padding: var(--space-sm);
   margin: 0;
   min-height: 56px;
@@ -677,14 +677,9 @@
 .panels__5e434 {
   display: flex;
   flex-direction: column;
-  gap: var(--space-8);
+  gap: 8px;
   background: var(--background-gradient-high, var(--background-base-lowest));
   border: none;
-}
-
-.listeningAlong_e0cf27, .panel__5dec7, .container_e131a9, .container__37e49 {
-   background-color: var(--background-gradient-highest, var(--background-base-low));
-   border-radius: 7px;
 }
 
 /*Compact User Area (delete if you don't use)*/
@@ -710,4 +705,16 @@ nav.guilds__5e434, #channels {
   display: none;
 }*/
 
+/* Fix - Activity Panel margin-bottom */
+.panel__5dec7 {
+  padding: calc(var(--custom-guild-list-padding) - var(--custom-panels-spacing) + 3px);
+}
+
+.wrapper_e131a9 {
+  background-color: var(--background-gradient-highest, var(--background-base-low));
+	
+  &:not(:has(.container_e131a9)) {
+    display: none;
+  }
+}
 
